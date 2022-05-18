@@ -2,9 +2,7 @@
 	$nvar=$_REQUEST["nvar"]; 
 	$nres=$_REQUEST["nres"];
 	$obj=$_REQUEST["objetivo"];
-
-
-
+	
 	//comprobamos si es simplex
 	for($i=1;$i<=$nres;$i++)
 		if($_REQUEST["dir$i"]==2)
@@ -53,7 +51,7 @@
 <h1>Fase 2</h1>
 <div class="text">
 	<h2>Iteración 0</h2>
-	<form id="iteraciones" name="iteraciones" method="post" action="simplex.php">
+	<form id="iteraciones" name="iteraciones" method="post" action="index.php">
 		<input type="hidden" name="phase" value="3">
 		<input type="hidden" name="nvar" value="<?php echo $nvar; ?>">
 		<input type="hidden" name="nres" value="<?php echo $nres; ?>">

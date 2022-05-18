@@ -1,60 +1,81 @@
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-        <head>
-            <title>Simplex Inocorp</title>
-            <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-            <link rel="stylesheet" type="text/css" href="css/style.css" />
-        </head>
+<head>
+    <title>Metodo Simplex</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
 
-        <body>
-   			<div class="simplex"></div>
-			<div class="inocorp"></div>        
-            <div id="first_container">
-                <div id="second_container">
-                    <div id="third_container">
-                        <ul id="menu">
-                            <li><a href="ayuda.php">Ayuda</a></li>
-                            <li><a href="simplex.php">Simplex()</a></li>
-                            <li><a href="proyecto.php">Proyecto</a></li>
-                            <li><span id="menuselected">Home</span></li>
-                        </ul>
-                        <div class="border">
-                            <div class="content">
-                                    <h1>¿Que es Simplex Inocorp?</h1>
-                                    <div class="text">
-                                        <p>"Simplex inocorp" surge como proyecto escolar para el curso de Investigación de Operaciones del Instituto Tecnológico de Celaya.</p>
-	
-										<p>La aplicación automatiza el procedimiento para la resolución del método simplex, resolviéndolo en iteraciones hasta obtener el punto óptimo sea Maximizar o Minimizar.</p>
-
-										<p>El diseño esta basado en un Template disponible en <a href="http://www.oswd.org/">“Open Source Web Design”</a> llamado <a href="http://www.oswd.org/design/preview/id/3166">Vanero</a> por lo que hacemos una agradecida referencia al diseñador.</p>
-
-										<p>La información aquí publicada forma parte de diversos sitios:</p>
-										<ul>
-											<li><a href="http://es.wikipedia.org/wiki/Algoritmo_simplex">http://es.wikipedia.org/wiki/Algoritmo_simplex</a></li>
-											<li><a href="http://www.zweigmedia.com/MundoReal/simplex.html">http://www.zweigmedia.com/MundoReal/simplex.html</a></li>
-											<li><a href="http://www-unix.mcs.anl.gov/otc/Guide/CaseStudies/simplex/applet-old/index.html">http://www-unix.mcs.anl.gov/otc/Guide/CaseStudies/simplex/applet-old/index.html</a></li>
-											<li><a href="http://www.phpsimplex.com/">http://www.phpsimplex.com/</a></li>
-										</ul>
-										<p>Se Agradece la libre publicación de información como ayuda para el desarrollo de este proyecto.</p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <ul id="submenu">
-                            <li><span id="submenuselected">Español</span></li>
-                            <li><a href="">English</a></li>
-                        </ul>
-                        
-                        <div class="designinfo">
-                            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fsimplex.inocorp.org%2Findex.php">valid XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fsimplex.inocorp.org%2Fcss%2Fstyle.css&profile=css21&usermedium=all&warning=1&lang=es">valid CSS</a> | <a href="http://inocorp.org/">Inocorp</a>
-                        </div>
-                        
-                    </div>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #21081a;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/meso-logo.png" alt="" width="30" height="30" />
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="info.php">Informacion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="text-align:center;">
+        <h1>Proyecto de investigacion de operaciones</h1>
+    </div>
+    <div class="container-fluid" style="text-align:center;">
+        <h2>Aplicacion para realizacion de metodo simplex en programacion lineal</h2>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div id="third_container" style="text-align:center;">
+            <!-- <ul id="menu">
+                        <li><a href="ayuda.php">Ayuda</a></li>
+                        <li><span id="menuselected">Simplex()</span></li>
+                        <li><a href="simplex.php">Inicio</a></li>
+                    </ul> -->
+            <div class="border" style="text-align:center;">
+                <div class="container" style="text-align:center;">
+                    <?php
+                    $phase = $_REQUEST['phase'];
+                    switch ($phase) {
+                        case 0:
+                            require_once("phase0.php");
+                            break;
+                        case 1:
+                            require_once("phase1.php");
+                            break;
+                        case 2:
+                            require_once("phase2.5.php");
+                            break;
+                        case 3:
+                            require_once("phasen.php");
+                            break;
+                        case 4:
+                            require_once("phase2n.php");
+                            break;
+                    }
+                    ?>
                 </div>
             </div>
-                    
-        </body>
-        
-    </html>
-    
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 
+            <a class="text-white" href="https://www.mesoamericana.edu.gt/">Universidad Mesoamericana Xela</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>

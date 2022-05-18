@@ -63,7 +63,7 @@
 <h1>Fase 2 :: Metodo de las Dos Fases</h1>
 <div class="text">
 	<h2>Iteración 0</h2>
-	<form id="iteraciones" name="iteraciones" method="post" action="simplex.php">
+	<form id="iteraciones" name="iteraciones" method="post" action="index.php">
 		<input type="hidden" name="phase" value="4">
 		<input type="hidden" name="nvar" value="<?php echo $nvar; ?>">
 		<input type="hidden" name="nres" value="<?php echo $nres; ?>">

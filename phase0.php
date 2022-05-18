@@ -6,11 +6,11 @@
 	</p>
 	<div class="container" style="text-align:center;">
 		<p>
-		<form id="fsimplex" name="fsimplex" method="post" action="simplex.php" style="text-align:center;">
+		<form id="fsimplex" name="fsimplex" method="post" action="index.php" style="text-align:center;">
 			<table>
 				<tbody>
 					<tr>
-						<td class="des" style="text-align:center;">
+						<td class="des">
 							<label for="ncol">
 								Numero de Variables:
 							</label>

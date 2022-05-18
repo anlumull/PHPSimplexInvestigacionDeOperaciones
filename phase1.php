@@ -9,7 +9,7 @@
 		Introduce los datos requeridos.
 	</p>
 	<p>
-		<form id="fsimplex" name="fsimplex" method="post" action="simplex.php">
+		<form id="fsimplex" name="fsimplex" method="post" action="index.php">
 			<input type="hidden" name="phase" value="2">
 			<input type="hidden" name="nvar" value="<?php echo $nvar; ?>">
 			<input type="hidden" name="nres" value="<?php echo $nres; ?>">
